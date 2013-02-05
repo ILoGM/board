@@ -26,6 +26,7 @@ ru:
   view_message: 'Посмотреть Сообщение'
   reply_sent: 'Ваш ответ отправлен.'
   users: 'Пользователи'
+  items: 'Объявления'
   activerecord:
     attributes:
       user:

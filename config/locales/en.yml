@@ -19,6 +19,7 @@ en:
   message_list: 'Message List'
   reply_sent: 'Reply sent.'
   users: 'Users'
+  items: 'Items'
   activerecord:
     attributes:
       user:
