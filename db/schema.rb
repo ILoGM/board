@@ -54,12 +54,13 @@ ActiveRecord::Schema.define(:version => 20130207122545) do
   end
 
   create_table "photos", :force => true do |t|
-    t.integer  "item_id",    :null => false
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "item_id",          :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.string   "file"
     t.boolean  "is_main"
     t.string   "state"
+    t.datetime "state_changed_at"
   end
 
   create_table "roles", :force => true do |t|
