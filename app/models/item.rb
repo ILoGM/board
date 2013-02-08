@@ -12,7 +12,7 @@ class Item < ActiveRecord::Base
   has_and_belongs_to_many :tags, uniq: true
   has_many :photos,   dependent: :destroy
   has_many :messages, dependent: :destroy
-  has_many :admin_comments, as: :bannable
+  has_one :admin_comment, as: :bannable
 
   validates :contact_info, length: {in: 11..255}, allow_blank: true
   validates :contact_info, presence: true
