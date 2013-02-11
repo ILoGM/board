@@ -85,11 +85,6 @@ class Item < ActiveRecord::Base
     end
   end
 
-  scope :active, lambda { where("state <> ?", :archived) }
-  scope :archived, lambda { where("state = ?", :archived) }
-  scope :with_messages, lambda { uniq.joins(:messages) }
-  scope :published, lambda {where("state = ?", :published)}
-
   def self.tagged_with(tags)
     inner_joins = tags.collect do |tag|
       tt = "items_tags_for_tag_#{tag.id}"
